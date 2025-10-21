@@ -1,581 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Kian Farooghi</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kian Farooghi - Control Systems & ML Engineer</title>
     <style>
-        .navbar-dark {
-          background-color: rgb(79, 166, 167) !important; 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      </style>
-      
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Kian Farooghi</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Teachingexperiences">Teaching Experiences</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Toefl Score">Toefl Score</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Contact & Email">Contact & Email</a></li>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .education-item, .experience-item, .publication-item, .project-item {
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .education-item h3, .experience-item h3, .publication-item h3, .project-item h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        .meta-info {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .gpa {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 10px 0;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .keywords {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .keywords span {
+            display: inline-block;
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 5px 12px;
+            margin: 4px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category ul li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .skill-category ul li:before {
+            content: "▹ ";
+            color: #764ba2;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .references {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .reference-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .reference-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .reference-card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .reference-card a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .highlight-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin: 10px 5px;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        a.publication-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        a.publication-link:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kian Farooghi</h1>
+            <p>M.Sc. in Control Systems | Machine Learning Researcher</p>
+            <p>Khaje Nasir Toosi University of Technology - Tehran, Iran</p>
+            <div class="contact-links">
+                <a href="mailto:kianfarooghi@gmail.com">Email</a>
+                <a href="tel:+989394984585">Phone</a>
+                <a href="#" target="_blank">Website</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="highlight-box">
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    I am a results-driven Electrical Engineer with a Master's in Control Systems, specializing in reinforcement learning and data-driven control. I have proven hands-on coding experience in an industrial setting and have published research on algorithm development for Forex trading. I am seeking a PhD opportunity to further explore machine learning applications.
+                </p>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3 style="color: #667eea; margin-bottom: 15px;">Research Interests</h3>
+                <div class="keywords">
+                    <span>Reinforcement Learning</span>
+                    <span>Deep Learning</span>
+                    <span>System Identification</span>
+                    <span>Robotics</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>M.Sc. in Electrical Engineering (Control)</h3>
+                <div class="meta-info">K. N. Toosi University of Technology, Tehran, Iran | Sep 2021 – 2023</div>
+                <div class="gpa">GPA: 4.0/4.0 (18.68/20)</div>
+                <p><strong>Thesis:</strong> Forex Market Trading Strategy Based on Deep Reinforcement Learning</p>
+            </div>
+
+            <div class="education-item">
+                <h3>B.Sc. in Electrical Engineering (Control)</h3>
+                <div class="meta-info">University of Tabriz, Tabriz, Iran | Sep 2016 – Jul 2021</div>
+                <div class="gpa">GPA: 3.4/4.0 (16.58/20)</div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+           
+            <div class="publication-item">
+                <h3>Determining the Most Lucrative Currency to Mine in Cryptocurrency Mining Farms</h3>
+                <div class="meta-info">Kian Farooghi, Hamid Nemati, Hamid Khaloozadeh | <strong>Submitted</strong></div>
+                <p>Using heuristic optimization and deep learning for financial time series forecasting in cryptocurrency mining and blockchain applications.</p>
+                <div class="keywords">
+                    <span>Heuristic Optimization</span>
+                    <span>Deep Learning</span>
+                    <span>Financial Time Series</span>
+                    <span>Cryptocurrency</span>
+                    <span>Blockchain</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <h3>Cooperative Multi-Agent Deep Reinforcement Learning for Forex Algorithmic Trading</h3>
+                <div class="meta-info">Kian Farooghi, Hamid Khaloozadeh | International Conference on Computational Intelligence and Applications (ICCIA), 2024</div>
+                <p>Implementation of Proximal Policy Optimization for multi-agent systems in algorithmic trading.</p>
+                <div class="keywords">
+                    <span>Deep Reinforcement Learning</span>
+                    <span>Multi-Agent Systems</span>
+                    <span>PPO</span>
+                    <span>Algorithmic Trading</span>
+                    <span>Forex</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <h3>Deep Learning for Bitcoin Price Prediction: The Power of Transformers and Time2Vec</h3>
+                <div class="meta-info">Reza Lak, Kian Farooghi, Hamid Khaloozadeh | First International Conference on Computer, Electricity, Mechanics and Engineering Sciences</div>
+                <p>Leveraging transformer architectures and Time2Vec for cryptocurrency price prediction.</p>
+                <div class="keywords">
+                    <span>Transformers</span>
+                    <span>Attention</span>
+                    <span>Time2Vec</span>
+                    <span>Bitcoin</span>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <h3>Tabular Dyna-Q Algorithm for Online Calculation of LQR Gains</h3>
+                <div class="meta-info">Kian Farooghi, Mahdieh Samadi, Hamid Khaloozadeh | International Conference on Electrical Engineering and Technology (ICEET), 2023</div>
+                <p>A simulation study on reinforcement learning approaches for optimal control and data-driven control systems.</p>
+                <div class="keywords">
+                    <span>Reinforcement Learning</span>
+                    <span>Dyna-Q</span>
+                    <span>Q-Learning</span>
+                    <span>Optimal Control</span>
+                    <span>LQR</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+           
+            <div class="experience-item">
+                <h3>Developer (C# & Embedded C)</h3>
+                <div class="meta-info">Sedna Organization | 2024 - Present</div>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li><strong>GUI for BLDC Motor Driver Test:</strong> Designed and deployed a comprehensive C# GUI with integrated real-time data acquisition, analysis pipelines, and distributed control via socket programming with role-based remote access. Adopted by 10+ engineers and technicians.</li>
+                    <li><strong>ARM Firmware Architecture:</strong> Refactored and redesigned architecture for sensorless BLDC motor drives, improving maintainability, modularity, and debugging efficiency while achieving 33% faster response time and 11% reduction in execution time.</li>
+                    <li><strong>Dynamic Configuration System:</strong> Developed one general source code for all products, enabling dynamic configuration of 50+ parameters (including floating-point values) via Modbus communication.</li>
+                    <li><strong>Auto-Tuning System:</strong> Developed microcontroller-based auto-tuning of PI controllers for BLDC motors, officially recognized by the government as an alternative to compulsory military service.</li>
                 </ul>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0"  style ="font-family: 'Lato'; font-size: 80px;">
-                        Kian    
-                        <span style="color: rgb(1, 115, 133); " style ="font-family: 'Lato'; font-size: 80px;">Farooghi</span> 
-                      </h1>
-                    <div class="subheading mb-5" style="color: rgb(245, 165, 26) !important; text-align: Left; font-size: 23px;">
-                        
-                        <a href="mailto:K.farooghi@email.kntu.ac.ir" style ="font-family: 'Lato'; font-size: 25px;">K.farooghi@email.kntu.ac.ir</a>
-                    </div>
-                    <p class="lead mb-5">I am an Electrical engineer with expertise in reinforcement learning (RL) and deep RL.
-                        Furthermore, I have worked extensively on applying RL algorithms to optimize solutions in various domains. My background also includes strong software engineering skills in C#, Python ,and MATLAB programming languages. I also work on developing trading algorithms for financial markets. I am passionate about leveraging my skills in RL, deep learning, and software engineering to build innovative solutions to real-world problems.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/kian-farooghi-1838aa1b9/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/kianfa"><i class="fab fa-github"></i></a>
 
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-            <!-- Education-->
-            <section class="resume-section" id="education"  style="background-color: #fafafa;" >
-                <div class="resume-section-content"  >
-                    <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito' ; text-align: center; font-size: 55px;" >Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" ">
-                       
-
-                    <div class="flex-grow-1" >
-                    <div class="d-flex">
-                        <td width="80px">
-                        <center>
-                            <img src="assets/img/KNTU.png" alt="" width="80px" />
-                        </center>
-                        </td>
-                        <div class="ms-3">
-                            <a href="https://en.kntu.ac.ir/">
-                                  <h3 class="mb-0" style="font-family: 'Gabarito'">K. N. Toosi University</h3>
-                            </a>
-                        <div class="subheading mb-3" style="font-family: 'Gabarito'; font-size: 20px">M.Sc. in Electrical Engineering</div>
-                        <div>M.Sc. Electrical Engineering - Control</div>
-                        <div>Tehran, Iran</div>
-                        <p>Grade : 18.68 / 20</p>
-                        </div>
-                    </div>
-                    </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2021 - Present</span></div>
-                    </div>
-                    	
-
-
-
-                        <div class="d-flex flex-column flex-md-row justify-content-between">
-
-                            <div class="flex-grow-1" style="margin-bottom: 40px;">
-                          
-                              <div class="d-flex">
-                              
-                                <td width="80px">
-                                  <center>
-                                    <img src="assets/img/TABRIZ.jpeg" alt="" width="80px" />
-                                  </center>
-                                </td>
-                          
-                                <div class="ms-3">
-                                  <a href="https://tabrizu.ac.ir/EN">
-                                    <h3 class="mb-0" style="font-family: 'Gabarito';" >Tabriz University</h3>
-                                  </a>
-                                  
-                                  <div class="subheading mb-3" style="font-family: 'Gabarito'; font-size: 20px">B.Sc. in Electrical Engineering
-                                </div>
-                                  <div>B.Sc. Electrical Engineering - Control</div>
-                                  <div>Tabriz, Iran</div>
-                                  <p>Grade : 16.58 / 20</p>
-                                </div>
-                          
-                              </div>
-                          
-                            </div>
-                          
-                            <div class="flex-shrink-0">
-                              <span class="text-primary">2016 - 2021</span> 
-                            </div>
-                          
-                          </div>
-
-                          <div class="d-flex flex-column flex-md-row justify-content-between">
-
-                            <div class="flex-grow-1">
-                          
-                              <div class="d-flex">
-                              
-                                <td width="80px">
-                                  <center>
-                                    <img src="assets/img/Sampad.png" alt="" width="80px" />
-                                  </center>
-                                </td>
-                          
-                                <div class="ms-3">
-                                  <a href="https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents">
-                                    <h3 class="mb-0" style="font-family: 'Gabarito';"">SAMPAD high school</h3>
-                                  </a>
-                                  
-                                  <div class="subheading mb-3" style="font-family: 'Gabarito'; font-size: 20px">Diploma in Mathematics and Physics' Discipline</div>
-                                  <div> </div>
-                                  <div>Sanandaj, Iran</div>
-                                  <div style="color: #f7f5f5 !important;"">a </div>
-                                  <div style="color: #f7f5f5 !important;"">a </div>
-                                  <div style="color: #f7f5f5 !important;"">a </div>
-                                </div>
-                          
-                              </div>
-                          
-                            </div>
-                          
-                            <div class="flex-shrink-0">
-                              <span class="text-primary">2012 - 2016</span> 
-                            </div>
-                          
-                          </div>
-
-
-
-
-                          
-            </section>
-            <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito' ; text-align: center; font-size: 55px;">Skills</h2>
-                    
-
-
-                    <div class="mb-2" style="color: rgb(83, 83, 83) !important; font-family: 'Gabarito' ; text-align: left; font-size: 25px;">Programming Languages & Tools</div>
-                    
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Python
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            MATLAB
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Simulink
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            C#
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            SQL
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Bascom
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Proteus
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Arduino
-                        </li>
-                    </ul>
-
-
-                    <!-- <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                    </ul> -->
-                    <div style="color: rgb(255, 255, 255) !important;"> a</div>
-                    <div style="color: rgb(255, 255, 255) !important;"> a</div>
-                    <div class="mb-3"  style="color: rgb(83, 83, 83) !important; font-family: 'Gabarito' ; text-align: left; font-size: 25px;" >Related Skills</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Reinforcement Learning
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Deep learning
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Pytorch
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            System Identification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Optimal Control
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests" style="background-color: #fafafa;">
-                <div class="resume-section-content">
-                    <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito' ; text-align: center; font-size: 45px;">Interests</h2>
-                    <p>Apart from research and academic environment, I really like programming. Also, I am passionate about time series forecasting with and without machine learning methods.</p>
-                    <p class="mb-0">I have a short history of trading in Forex market, and I really like the relationship of pairs and other related subjects to Forex. </p>
-                </div>
-            </section>
-            
-            <!-- Publications -->
-            <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-            <section class="resume-section" id="publications">
-            
-                <div class="resume-section-content">
-            
-                <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito'; text-align: center; font-size: 45px;">Publications</h2>
-                
-            
-                <ul class="fa-ul mb-0">
-                    
-                    
-                    <li>
-                        <div span class="d-flex">
-                            
-                            <td width="80px">
-                            <center>
-                                <img src="assets/img/ICEET.jpeg" alt="" width="80px" />
-                            </center>
-                            </td>  
-                            <span>
-                                    <div>
-                                        <a  style="font-size: 1.5em;">
-                                            <b> Tabular Dyna-Q Algorithm for Online Calculation of LQR Gains: A Simulation Study </b>
-                                        </a> 
-                                     </div> 
-                                     <div style="font-size: 0.9em;">
-                                        Key words: Reinforcement Learning, Dyna-Q, Q learning, Optimal Control, LQR, Data-driven control 
-                                     </div>
-                                    <div style="font-size: 0.9em;">  
-                                         Authors : Kian Farooghi, Mahdieh Samadi , Hamid Khaloozadeh 
-                                    </div>
-
-                                    <div style="font-size: 0.7em;">  
-                                        ICEET Conference - 2023
-                                    </div>
-                            </div> 
-                        </span>
-                    </li>  
-
-                   
-                    
-                    
-                        <li>
-                            <div span class="d-flex">
-                                
-                                <td width="80px">
-                                <center>
-                                    <img src="assets/img/J1.jpg" alt="" width="80px"  height="90px"/>
-                                </center>
-                                </td>  
-                                <span>
-                                        <div>
-                                            <a  style="font-size: 1.5em;">
-                                                <b> Optimizing Profit for Cryptocurrency Mining farms using Heuristic Algorithms and Deep Learning-based Financial Time Series Forecasting (under review) </b>
-                                            </a> 
-                                         </div> 
-                                         <div style="font-size: 0.9em;">
-                                            Key words: Optimization, Cryptocurrency, Deep learning, Time Series, Heuristic, Forecasting 
-                                         </div>
-                                        <div style="font-size: 0.9em;">  
-                                             Authors : Kian Farooghi, Hamid Nemati, Hamid Khaloozadeh, Amir Hossein Nikoofard
-                                        </div>
-    
-                                        <div style="font-size: 0.7em;">  
-                                            Computers & Industrial Engineering Journal 
-                                        </div>
-                                </div> 
-                            </span>
-                        </li>  
-                        <li>
-                            <div span class="d-flex">
-                                
-                                <td width="80px">
-                                <center>
-                                    <img src="assets/img/white.jpg" alt="" width="80px"  height="90px"/>
-                                </center>
-                                </td>  
-                                <span>
-                                        <div>
-                                            <a  style="font-size: 1.5em;">
-                                                <b> Improving Reinforcement Learning Auto-Trader Performance with Chart Image (Working Paper) </b>
-                                            </a> 
-                                         </div> 
-
-                                        <div style="font-size: 0.9em;">  
-                                             Authors : Hamid Nemati, Kian Faroughi, Amir Hossein Nikoofard, Hesham Faili
-                                        </div>
-    
-                                        <div style="font-size: 0.7em;">  
-                                            Computers & Industrial Engineering Journal 
-                                        </div>
-                                </div> 
-                            </span>
-                        </li>  
-
-
-
-
-                    <!--             
-                    <li>
-                    <span class="fa-li">
-                        <i class="fas fa-file-alt text-warning"></i>
-                    </span>  
-                    [Author 1, Author 2, Author 3] "Paper Title", Conference Name, 2022  
-                    </li>
-            
-                    <li>
-                    <span class="fa-li">
-                        <i class="fas fa-file-alt text-warning"></i>
-                    </span>
-                    [Author 1, Author 2] "Paper Title", Journal Name, 2023
-                    </li> -->
-                
+            <div class="experience-item">
+                <h3>Lead Programmer (Python & C)</h3>
+                <div class="meta-info">Agrin Company | 2025</div>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li>Led a team of 3 programmers to develop a multi-camera surveillance platform for timelapse and long-term monitoring.</li>
+                    <li>Implemented real-time panoramic stitching of frames from two side-by-side cameras with robust TCP/IP streaming pipeline.</li>
+                    <li>Integrated motorized camera modules, image processing, and UI control systems using Python for orchestration and C for performance-critical components.</li>
                 </ul>
-            
+            </div>
+
+            <h3 style="margin-top: 50px; color: #667eea; font-size: 1.5em;">Teaching Experience</h3>
+           
+            <div class="experience-item">
+                <h3>Head Teaching Assistant - Reinforcement Learning</h3>
+                <div class="meta-info">K.N.TU | Spring 2024 (35+ students) & Spring 2023 (45+ students)</div>
+                <p>Proposed homework questions and solved assigned problems in online class groups.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Teaching Assistant - Multivariable Control</h3>
+                <div class="meta-info">K.N.TU | Spring 2023 (45+ students)</div>
+                <p>Designed and graded homework and quizzes.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Head Teaching Assistant - Python Programming</h3>
+                <div class="meta-info">K.N.TU | Fall 2022 (45+ students)</div>
+                <p>Graded homework and quizzes; recorded screen while coding example questions.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Teaching Assistant - Game Theory</h3>
+                <div class="meta-info">K.N.TU | Fall 2022 (45+ students)</div>
+                <p>Designed and graded homework assignments.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Instructor - C-Sharp Web Scraping Course</h3>
+                <div class="meta-info">Faradars Institute (Online) | Fall 2021</div>
+                <p>Recorded a full programming course and designed questions based on video concepts.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Academic Projects</h2>
+           
+            <div class="project-item">
+                <h3>Heliostat Position Control in a Solar Power Plant using RL</h3>
+                <div class="meta-info">Spring 2024</div>
+                <p>Python programming for training an agent to change heliostat positions to maximize power plant efficiency.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Deep RL Ping-Pong Player Agent</h3>
+                <div class="meta-info">Spring 2023</div>
+                <p>Trained an agent using PyTorch to play ping-pong using visual input from the playground.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Dynamic Relative Gain Analysis</h3>
+                <div class="meta-info">Fall 2022</div>
+                <p>MATLAB simulation for RGA calculation as part of Multivariable Control course with Dr. Ali Khaki Sedigh.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>LQG Controller Design for Airplane System</h3>
+                <div class="meta-info">Spring 2022</div>
+                <p>Implemented LQG controller using MATLAB and Simulink for Optimal Control course with Dr. Hamid Khaloozadeh.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Robust H∞ Control for Networked Systems</h3>
+                <div class="meta-info">Fall 2021</div>
+                <p>Developed robust H∞ control strategy for Networked Control Systems (NCSs) with uncertainties in communication and system for Robust Control course with Dr. Mahsan Tavakoli-Kakhki.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Certifications</h2>
+           
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python (PyTorch, TensorFlow)</li>
+                        <li>C# (.NET, GUI Development)</li>
+                        <li>Embedded C (ARM)</li>
+                        <li>MATLAB & Simulink</li>
+                    </ul>
                 </div>
-            
-            </section>
 
-
-            <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-            <!-- TeachingExperience-->
-            
-            <section class="resume-section" id="Teachingexperiences" style="background-color: #fafafa;">
-
-                <div class="resume-section-content">
-              
-                  <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito'; text-align: center; font-size: 45px;" >Teaching Experiences</h2>
-              
-                  <ul class="fa-ul mb-0" >
-                  
-                    <li class="lead mb - 3">
-                      <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                      Reinforcement Learning - Head Teaching Assistant for 30+ students
-                    </li>
-              
-                    <li class="lead mb - 3"> 
-                      <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                      Python programming - Head Teaching Assistant for 45+ students  
-                    </li>
-              
-                    <li class="lead mb - 3">
-                      <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                      Multivariable Control - Teaching assistant for 40+ students
-                    </li>
-                    <li class="lead mb - 3">
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Game Theory - Teaching assistant for 35+ students
-                      </li>
-                    <li class="lead mb-3">
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Web Scraping - Course Instructor at Faradars <a href="https://faradars.org/courses/web-scraping-for-extracting-website-data-with-c-sharp-fvcs106">Link</a>
-                    </li>
-                  
-                  </ul>
-                
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English (TOEFL iBT: 109/120)</li>
+                        <li>Kurdish (Native)</li>
+                        <li>Persian (Bilingual)</li>
+                    </ul>
                 </div>
-              
-                    </section>
 
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <style>
-                        .certificates li {
-                            font-size: 6.5em; 
-                            font-weight: bold;
-                        }
-                        
-                        .certificates a {
-                            font-size: 6.5em;
-                            font-weight: bold;
-                        }
-                        </style>
-                    </head>
-                    
-                    <body>
-                        <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-
-
-
-
-                        <!-- Certificates-->
-                        <section class="resume-section" id="certificates" style="color: orange !important;">
-                        <div class="resume-section-content">
-                            <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito'; text-align: center; font-size: 45px;">Certificates</h2>
-                    
-                            <ul class="fa-ul mb-0">
-                    
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-certificate text-warning" style="font-size: 2.25em; "></i></span>
-                                    <a href="https://www.coursera.org/account/accomplishments/verify/X55YBWN8G962?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"   style="font-size: 1.5em;margin-left: 1em; " > SQL For Datascience</a> - Coursera  
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-certificate text-warning" style="font-size: 2.25em; "></i></span>
-                                    <a href="https://www.coursera.org/account/accomplishments/verify/6X3SXY9E92UA?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"   style="font-size: 1.5em;margin-left: 1em; " > Supervised Machine Learning</a> - Coursera  
-                                </li>
-                                
-                    
-                    
-                            </ul>
-                    
-                        </div>
-                        </section>
-                        <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-
-                        <!-- Contact-->
-                      
-                        <section class="resume-section"  id="Toefl Score" style="background-color: #fafafa;" >
-                        <div class="resume-section-content">
-                            <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito'; text-align: center; font-size: 45px;">Toefl Score</h2>
-                            
-                            <div style="text-align:center; margin-left: auto;  margin-right: auto; ">
-                            <table class="TB1" style="border: 1px solid #a8c74e; border-collapse: collapse; font-size: 32px; ;text-align:center; margin-left: auto;  margin-right: auto; ">
-                                <tr style="background-color: #f2f2f2;">
-                                  <td style="padding: 10px; border: 1px solid #ccc;">Reading</td> 
-                                  <td style="padding: 10px; border: 1px solid #ccc;">Listening</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">Speaking</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">Writing</td> 
-                                  <td style="padding: 10px; border: 1px solid #ccc;">  Total Score  </td>
-                                </tr>
-                                
-                                <tr>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">30</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">29</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">24</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">26</td>
-                                  <td style="padding: 10px; border: 1px solid #ccc;">109</td>
-                                </tr>
-                              </table>
-                            </div>
-                    
-                    
-                            </ul>
-                    
-                        </div>
-                        </section>  
-                   
-
-                        
-
-                        <hr class="m-0" style="color: rgb(8, 167, 172) !important; border-width: 5px;" />
-                        <!-- Contact-->
-                        <section class="resume-section"  id="Contact & Email" style="color: #fafafa;" >
-                        <div class="resume-section-content">
-                            <h2 class="mb-5"  style="color: rgb(64, 137, 139) !important; font-family: 'Gabarito'; text-align: center; font-size: 45px;">Contact & Email</h2>
-                    
-                            <div  style= "text-align: center; font-size: 30px;">
-                        
-                                <a href="mailto:k.farooghi@email.kntu.ac.ir" style="color: rgb(0, 0, 0) !important; font-family: 'Gabarito'; text-align: center; font-size: 30px;">K.Farooghi@email.kntu.ac.ir</a>
-                            </div>
-                                
-                    
-                    
-                            </ul>
-                    
-                        </div>
-                        </section>
-          
-                        
-
-
-
-
-
-
-
-
-                    </body>
-                    </html>
-                        <!-- <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Multi Input Multi Output - Teaching assistant for 40+ students
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li> -->
-                    <!-- </ul>
+                <div class="skill-category">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>SQL For Data Science</li>
+                        <li>Supervised Machine Learning</li>
+                    </ul>
                 </div>
-            </section>
-        </div> -->
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Reinforcement Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Control Systems</li>
+                        <li>Embedded Systems</li>
+                        <li>Real-time Systems</li>
+                        <li>Socket Programming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <h3 style="color: #667eea; margin-bottom: 20px;">Honors & Awards</h3>
+                <div class="highlight-box">
+                    <div class="achievement-badge">🏆 National Merit Recognition 2025</div>
+                    <p style="margin-top: 15px; font-size: 1.05em;">
+                        Microcontroller-based PI controller auto-tuning for next-generation water coolers developed for Sedna company. Approved as an alternative to compulsory military service by the Iranian government.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <div class="references">
+                <div class="reference-card">
+                    <h3>Dr. Hamid Khaloozadeh</h3>
+                    <p>Department of Electrical Engineering</p>
+                    <p>Khaje Nasir University of Technology</p>
+                    <p style="margin-top: 10px;">
+                        <a href="mailto:h_khaloozadeh@kntu.ac.ir">h_khaloozadeh@kntu.ac.ir</a>
+                    </p>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Hamid Nemati</h3>
+                    <p>Department of Computing Science</p>
+                    <p>Umeå University</p>
+                    <p>Researcher at WASP</p>
+                    <p style="margin-top: 10px;">
+                        <a href="mailto:hamid.nemati@umu.se">hamid.nemati@umu.se</a>
+                    </p>
+                </div>
+
+                <div class="reference-card">
+                    <h3>Dr. Amirhossain Nikoofard</h3>
+                    <p>Department of Electrical Engineering</p>
+                    <p>Khaje Nasir University of Technology</p>
+                    <p style="margin-top: 10px;">
+                        <a href="mailto:a.nikoofard@kntu.ac.ir">a.nikoofard@kntu.ac.ir</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kian Farooghi. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">M.Sc. in Control Systems | Seeking PhD Opportunities</p>
+        </div>
+    </footer>
+</body>
 </html>
