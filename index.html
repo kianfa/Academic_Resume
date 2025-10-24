@@ -165,6 +165,23 @@
             margin-top: 30px;
         }
 
+        .skill-row {
+            display: flex;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: #667eea;
+            min-width: 220px;
+            flex-shrink: 0;
+        }
+
+        .skill-content {
+            color: #555;
+        }
+
         .skill-category {
             background: #f9f9f9;
             padding: 25px;
@@ -495,61 +512,30 @@
         <section id="skills">
             <h2>Technical Skills</h2>
            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>MATLAB</li>
-                        <li>C (ARM/STM32)</li>
-                        <li>C# (.NET/WPF)</li>
-                        <li>Bascom</li>
-                        <li>SQL</li>
-                        <li>Arduino</li>
-                    </ul>
+            <div style="margin-top: 30px;">
+                <div class="skill-row">
+                    <div class="skill-label">Programming Languages:</div>
+                    <div class="skill-content">Python, MATLAB, C (ARM/STM32), C# (.NET/WPF), Bascom, SQL, Arduino</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Platforms & Libraries</h3>
-                    <ul>
-                        <li>PyTorch</li>
-                        <li>Pandas</li>
-                        <li>PyQt5</li>
-                        <li>Selenium (C# and Python)</li>
-                        <li>BeautifulSoup</li>
-                        <li>SQL Server Management Studio (SSMS)</li>
-                        <li>SQL Server, MySQL</li>
-                    </ul>
+                <div class="skill-row">
+                    <div class="skill-label">Platforms & Libraries:</div>
+                    <div class="skill-content">PyTorch, Pandas, PyQt5, Selenium (C# and Python), BeautifulSoup, SQL Server Management Studio (SSMS), SQL Server, MySQL</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Software</h3>
-                    <ul>
-                        <li>Simulink</li>
-                        <li>Proteus</li>
-                    </ul>
+                <div class="skill-row">
+                    <div class="skill-label">Software:</div>
+                    <div class="skill-content">Simulink, Proteus</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Networking & Protocols</h3>
-                    <ul>
-                        <li>Modbus</li>
-                        <li>CAN</li>
-                        <li>TCP/IP</li>
-                        <li>UDP</li>
-                    </ul>
+                <div class="skill-row">
+                    <div class="skill-label">Networking & Protocols:</div>
+                    <div class="skill-content">Modbus, CAN, TCP/IP, UDP</div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Core Competencies</h3>
-                    <ul>
-                        <li>Reinforcement Learning</li>
-                        <li>Deep Learning</li>
-                        <li>Heuristic Optimization Methods</li>
-                        <li>Control Systems</li>
-                        <li>Embedded Systems</li>
-                        <li>Real-time Systems</li>
-                    </ul>
+                <div class="skill-row">
+                    <div class="skill-label">Core Competencies:</div>
+                    <div class="skill-content">Reinforcement Learning, Deep Learning, Heuristic Optimization Methods, Control Systems, Embedded Systems, Real-time Systems</div>
                 </div>
             </div>
 
