@@ -349,6 +349,7 @@
             transition: all 0.3s;
             box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
             margin-top: 15px;
+            white-space: nowrap;
         }
 
         .github-link:hover {
@@ -356,11 +357,7 @@
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
 
-        .github-link::before {
-            content: "</>";
-            font-size: 1em;
-            font-weight: 700;
-        }
+
 
         @media (max-width: 768px) {
             header h1 {
@@ -537,7 +534,10 @@
             </div>
 
             <div class="project-item">
-                <h3>Heliostat Position Control in Solar Power Plant using RL</h3>
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                    <h3>Heliostat Position Control in Solar Power Plant using RL</h3>
+                    <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/Heliostat-position-optimization-in-a-power-plant" target="_blank" class="github-link" style="margin-top: 0;">View Project on GitHub</a>
+                </div>
                 <div class="meta-info">Spring 2024</div>
                 <p>Developed DQN agent to optimize heliostat positioning for maximizing power plant efficiency in real-time solar tracking applications.</p>
                 <div class="keywords">
@@ -545,11 +545,13 @@
                     <span>Energy Optimization</span>
                     <span>Python</span>
                 </div>
-                <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/Heliostat-position-optimization-in-a-power-plant" target="_blank" class="github-link">View Project on GitHub</a>
             </div>
 
             <div class="project-item">
-                <h3>Deep RL Ping-Pong Player Agent</h3>
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                    <h3>Deep RL Ping-Pong Player Agent</h3>
+                    <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/PING-PONG-Player-Agent" target="_blank" class="github-link" style="margin-top: 0;">View Project on GitHub</a>
+                </div>
                 <div class="meta-info">Spring 2023</div>
                 <p>Trained an agent using PyTorch to play ping-pong using visual input from the playground, demonstrating computer vision integration with reinforcement learning.</p>
                 <div class="keywords">
@@ -557,7 +559,6 @@
                     <span>Visual RL</span>
                     <span>Game AI</span>
                 </div>
-                <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/PING-PONG-Player-Agent" target="_blank" class="github-link">View Project on GitHub</a>
             </div>
 
             <div class="project-item">
