@@ -27,7 +27,7 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 80px 0;
+            padding: 40px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -63,6 +63,43 @@
         .contact-links a:hover {
             background: white;
             color: #667eea;
+        }
+
+        .highlights-banner {
+            background: white;
+            padding: 5px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            opacity: 0.5;
+            transition: opacity 0.4s ease;
+        }
+
+        .highlights-banner:hover {
+            opacity: 1;
+        }
+
+        .highlights-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            text-align: center;
+            padding: 15px 25px;
+        }
+
+        .highlight-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .highlight-text {
+            color: #555;
+            font-size: 0.95em;
+            margin-top: 5px;
         }
 
         nav {
@@ -115,7 +152,7 @@
         }
 
         .education-item, .experience-item, .publication-item, .project-item {
-            margin-bottom: 35px;
+            margin-bottom: 27px;
             padding-left: 20px;
             border-left: 3px solid #764ba2;
         }
@@ -156,6 +193,24 @@
             margin: 4px;
             border-radius: 15px;
             font-weight: 500;
+        }
+
+        .research-interests {
+            background: #f0f7ff;
+            padding: 5px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 3px solid #667eea;
+        }
+
+        .research-interests h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .research-interests .keywords {
+            margin-top: 5px;
         }
 
         .skills-grid {
@@ -296,6 +351,10 @@
             nav ul li a {
                 padding: 15px;
             }
+
+            .highlights-content {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -313,37 +372,41 @@
         </div>
     </header>
 
+    <div class="highlights-banner">
+        <div class="container">
+            <div class="highlights-content">
+                <div class="highlight-item">
+                    <span class="highlight-number">4.0/4.0</span>
+                    <span class="highlight-text">Master's GPA</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">4</span>
+                    <span class="highlight-text">Publications in ML/Control</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">200+</span>
+                    <span class="highlight-text">Students Taught (RL & Control)</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">2 Years</span>
+                    <span class="highlight-text">Industrial Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#references">References</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="highlight-box">
-                <p style="font-size: 1.1em; line-height: 1.8;">
-                    I am a results-driven Electrical Engineer with a Master's in Control Systems, specializing in reinforcement learning and data-driven control. I have proven hands-on coding experience in an industrial setting and have published research on algorithm development for Forex trading. I am seeking a PhD opportunity to further explore machine learning applications.
-                </p>
-            </div>
-            <div style="margin-top: 30px;">
-                <h3 style="color: #667eea; margin-bottom: 15px;">Research Interests</h3>
-                <div class="keywords">
-                    <span>Reinforcement Learning</span>
-                    <span>Deep Learning</span>
-                    <span>System Identification</span>
-                    <span>Robotics</span>
-                </div>
-            </div>
-        </section>
-
         <section id="education">
             <h2>Education</h2>
             <div class="education-item">
@@ -362,10 +425,21 @@
 
         <section id="publications">
             <h2>Publications</h2>
+            
+            <div class="research-interests">
+                <h3>Research Interests</h3>
+                <div class="keywords">
+                    <span>Reinforcement Learning</span>
+                    <span>Deep Learning</span>
+                    <span>System Identification</span>
+                    <span>Data-Driven Control</span>
+                    <span>Robotics</span>
+                </div>
+            </div>
            
             <div class="publication-item">
                 <h3>Determining the Most Lucrative Currency to Mine in Cryptocurrency Mining Farms</h3>
-                <div class="meta-info">Kian Farooghi, Hamid Nemati, Hamid Khaloozadeh | <strong>Submitted</strong></div>
+                <div class="meta-info">Kian Farooghi, Hamid Nemati, Hamid Khaloozadeh | <strong>Working Paper</strong></div>
                 <p>Using heuristic optimization and deep learning for financial time series forecasting in cryptocurrency mining and blockchain applications.</p>
                 <div class="keywords">
                     <span>Heuristic Optimization</span>
@@ -415,6 +489,57 @@
             </div>
         </section>
 
+        <section id="research">
+            <h2>Research Experience & Academic Projects</h2>
+            
+            <div class="project-item">
+                <h3>Master's Thesis Research</h3>
+                <div class="meta-info">K.N. Toosi University of Technology | 2021 - 2023</div>
+                <p><strong>Forex Market Trading Strategy Based on Deep Reinforcement Learning</strong></p>
+                <p style="margin-top: 10px;">Developed and implemented novel deep reinforcement learning algorithms for algorithmic trading in foreign exchange markets. Led to multiple publications and demonstrated practical applications of RL in financial systems.</p>
+                <div class="keywords">
+                    <span>Deep RL</span>
+                    <span>Multi-Agent Systems</span>
+                    <span>Financial Markets</span>
+                    <span>Algorithm Development</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Heliostat Position Control in Solar Power Plant using RL</h3>
+                <div class="meta-info">Spring 2024</div>
+                <p>Developed DQN agent to optimize heliostat positioning for maximizing power plant efficiency in real-time solar tracking applications.</p>
+                <div class="keywords">
+                    <span>DQN</span>
+                    <span>Energy Optimization</span>
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Deep RL Ping-Pong Player Agent</h3>
+                <div class="meta-info">Spring 2023</div>
+                <p>Trained an agent using PyTorch to play ping-pong using visual input from the playground, demonstrating computer vision integration with reinforcement learning.</p>
+                <div class="keywords">
+                    <span>PyTorch</span>
+                    <span>Visual RL</span>
+                    <span>Game AI</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>LQG Controller Design for Airplane System</h3>
+                <div class="meta-info">Spring 2022</div>
+                <p>Implemented LQG controller using MATLAB and Simulink for Optimal Control course with Dr. Hamid Khaloozadeh.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Robust H∞ Control for Networked Systems</h3>
+                <div class="meta-info">Fall 2021</div>
+                <p>Developed robust H∞ control strategy for Networked Control Systems (NCSs) with uncertainties in communication and system dynamics.</p>
+            </div>
+        </section>
+
         <section id="experience">
             <h2>Professional Experience</h2>
            
@@ -442,6 +567,7 @@
                     <li>Coordinated integration of <strong>motorized camera modules, image processing, and UI control systems</strong>, employing Python for orchestration and C for performance-critical components</li>
                 </ul>
             </div>
+
             <h3 style="margin-top: 50px; color: #667eea; font-size: 1.5em; margin-bottom: 25px;">Teaching Experience</h3>
             
             <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; border-left: 4px solid #764ba2;">
@@ -496,40 +622,6 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Academic Projects</h2>
-           
-            <div class="project-item">
-                <h3>Heliostat Position Control in a Solar Power Plant using RL</h3>
-                <div class="meta-info">Spring 2024</div>
-                <p>Python programming for training an agent to change heliostat positions to maximize power plant efficiency.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>Deep RL Ping-Pong Player Agent</h3>
-                <div class="meta-info">Spring 2023</div>
-                <p>Trained an agent using PyTorch to play ping-pong using visual input from the playground.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>Dynamic Relative Gain Analysis</h3>
-                <div class="meta-info">Fall 2022</div>
-                <p>MATLAB simulation for RGA calculation as part of Multivariable Control course with Dr. Ali Khaki Sedigh.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>LQG Controller Design for Airplane System</h3>
-                <div class="meta-info">Spring 2022</div>
-                <p>Implemented LQG controller using MATLAB and Simulink for Optimal Control course with Dr. Hamid Khaloozadeh.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>Robust H∞ Control for Networked Systems</h3>
-                <div class="meta-info">Fall 2021</div>
-                <p>Developed robust H∞ control strategy for Networked Control Systems (NCSs) with uncertainties in communication and system for Robust Control course with Dr. Mahsan Tavakoli-Kakhki.</p>
-            </div>
-        </section>
-
         <section id="skills">
             <h2>Technical Skills</h2>
            
@@ -540,13 +632,18 @@
                 </div>
 
                 <div class="skill-row">
-                    <div class="skill-label">Platforms & Libraries:</div>
-                    <div class="skill-content">PyTorch, Pandas, PyQt5, Selenium (C# and Python), BeautifulSoup, SQL Server Management Studio (SSMS), SQL Server, MySQL</div>
+                    <div class="skill-label">ML/AI Frameworks:</div>
+                    <div class="skill-content">PyTorch, Pandas, NumPy, Scikit-learn</div>
                 </div>
 
                 <div class="skill-row">
-                    <div class="skill-label">Software:</div>
-                    <div class="skill-content">Simulink, Proteus</div>
+                    <div class="skill-label">Development Tools:</div>
+                    <div class="skill-content">PyQt5, Selenium (C# and Python), BeautifulSoup, SQL Server Management Studio (SSMS), SQL Server, MySQL</div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-label">Engineering Software:</div>
+                    <div class="skill-content">MATLAB/Simulink, Proteus</div>
                 </div>
 
                 <div class="skill-row">
@@ -555,8 +652,13 @@
                 </div>
 
                 <div class="skill-row">
+                    <div class="skill-label">Research Skills:</div>
+                    <div class="skill-content">Deep RL (DQN, PPO, Dyna-Q), Multi-Agent Systems, System Identification, Optimal Control (LQR, LQG, H∞), Data-Driven Control</div>
+                </div>
+
+                <div class="skill-row">
                     <div class="skill-label">Core Competencies:</div>
-                    <div class="skill-content">Reinforcement Learning, Deep Learning, Heuristic Optimization Methods, Control Systems, Embedded Systems, Real-time Systems</div>
+                    <div class="skill-content">Reinforcement Learning, Deep Learning, Heuristic Optimization, Control Systems, Embedded Systems, Real-time Systems</div>
                 </div>
             </div>
 
@@ -574,7 +676,7 @@
             </div>
 
             <div style="margin-top: 50px;">
-                <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.8em;"> Honors & Certifications</h3>
+                <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.8em;">Honors & Certifications</h3>
                 <div class="highlight-box">
                     <div class="achievement-badge">🏆 National Merit Recognition 2025</div>
                     <p style="margin-top: 15px; font-size: 1.05em;">
