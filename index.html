@@ -335,6 +335,33 @@
             border-bottom-color: #764ba2;
         }
 
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+            margin-top: 15px;
+        }
+
+        .github-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .github-link::before {
+            content: "</>";
+            font-size: 1em;
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
@@ -518,7 +545,7 @@
                     <span>Energy Optimization</span>
                     <span>Python</span>
                 </div>
-                                <p style="margin-top: 10px;"><strong>Project Repository:</strong> <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/Heliostat-position-optimization-in-a-power-plant" target="_blank" class="publication-link">Heliostat Position Optimization on GitHub</a></p>
+                <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/Heliostat-position-optimization-in-a-power-plant" target="_blank" class="github-link">View Project on GitHub</a>
             </div>
 
             <div class="project-item">
@@ -530,7 +557,7 @@
                     <span>Visual RL</span>
                     <span>Game AI</span>
                 </div>
-                <p style="margin-top: 10px;"><strong>Project Repository:</strong> <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/PING-PONG-Player-Agent" target="_blank" class="publication-link">Ping-Pong Agent on GitHub</a></p>
+                <a href="https://github.com/kianfa/Deep-RL-Projects-/tree/PING-PONG-Player-Agent" target="_blank" class="github-link">View Project on GitHub</a>
             </div>
 
             <div class="project-item">
@@ -559,7 +586,7 @@
                     <li><strong>Optimized</strong> motor control algorithms and execution paths, achieving <strong>33% faster response time</strong> and <strong>11% reduction in execution time</strong> through systematic firmware performance tuning</li>
                     <li><strong>Generalized</strong> firmware architecture across product line by replacing hard-coded configurations with dynamic <strong>Modbus-based parameter system</strong>, enabling real-time tuning of <strong>50+ parameters including floating-point values</strong></li>
                     <li>Developed microcontroller-based auto-tuning algorithm for PI controllers in BLDC motors, recognized by Iranian government as qualifying research project (equivalent to completing military service requirement)</li>
-                    <li><strong>Project Repository:</strong> <a href="https://github.com/kianfa/Drive_GUI" target="_blank" class="publication-link">GUI Interface on GitHub</a></li>
+                    <li><a href="https://github.com/kianfa/Drive_GUI" target="_blank" class="github-link" style="margin-top: 10px;">View GUI Project on GitHub</a></li>
                 </ul>
             </div>
 
